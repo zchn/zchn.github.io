@@ -1,7 +1,8 @@
 console.log('footerjs');
 mainwrap = document.getElementById('main-wrap');
+cgbgurl = 'http://zchn.github.io/cg/bgchangstreet.jpg';
 if(window.location.pathname === '/video-projects.html' && mainwrap !== null){
-  mainwrap.style.background = "#000000 url('http://cdn1.editmysite.com/uploads/2/6/7/2/26720964/background-images/1940869920.jpg') fixed no-repeat center top";
+  mainwrap.style.background = "#000000 url('"+cgbgurl+"') fixed no-repeat center top";
   mainwrap.style['-webkit-background-size'] = 'cover';
   mainwrap.style['-moz-background-size'] = 'cover';
   mainwrap.style['-o-background-size'] = 'cover';
