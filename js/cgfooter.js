@@ -9,5 +9,4 @@ if(window.location.pathname === '/video-projects.html' && mainwrap !== null){
 }
 if(window.location.pathname === '/' && mainwrap !== null){
   mainwrap.style.height = '0px';
-  mainwrap.innerHTML = '';
 }
