@@ -7,3 +7,6 @@ if(window.location.pathname === '/video-projects.html' && mainwrap !== null){
   mainwrap.style['-o-background-size'] = 'cover';
   mainwrap.style['background-size'] = 'cover';
 }
+if(window.location.pathname === '/' && mainwrap !== null){
+  mainwrap.style.height = '0px';
+}
