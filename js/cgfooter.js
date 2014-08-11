@@ -1,5 +1,6 @@
 console.log('footerjs');
 mainwrap = document.getElementById('main-wrap');
+footerwrap = document.getElementById('footer-wrap');
 cgbgurl = 'http://zchn.github.io/cg/bgchangstreet.jpg';
 if(window.location.pathname === '/resume.html' && mainwrap !== null){
   mainwrap.style.background = "#000000 url('"+cgbgurl+"') fixed no-repeat center top";
@@ -11,4 +12,8 @@ if(window.location.pathname === '/resume.html' && mainwrap !== null){
 if(window.location.pathname === '/' && mainwrap !== null){
   mainwrap.style.height = '0px';
   mainwrap.style.background = "initial";
+}
+if(window.location.pathname === '/' && footerwrap !== null){
+  footerwrap.style.height = '0px';
+  footerwrap.style.background = "initial";
 }
