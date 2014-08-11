@@ -10,4 +10,5 @@ if(window.location.pathname === '/resume.html' && mainwrap !== null){
 }
 if(window.location.pathname === '/' && mainwrap !== null){
   mainwrap.style.height = '0px';
+  mainwrap.style.background = "#000000";
 }
