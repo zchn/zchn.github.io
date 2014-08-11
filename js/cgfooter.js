@@ -5,7 +5,7 @@ cgbgurl = 'http://zchn.github.io/cg/bgchangstreet.jpg';
 
 if(window.location.pathname === '/video.html' && mainwrap !== null){
   mainwrap.style.background = "#000000";
-  mainwrap.style.color = "#ffffff";
+  mainwrap.style.color = "white";
 }
 if (false){
   mainwrap.style.background = "#000000 url('"+cgbgurl+"') fixed no-repeat center top";
