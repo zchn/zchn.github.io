@@ -2,7 +2,10 @@ console.log('footerjs');
 mainwrap = document.getElementById('main-wrap');
 footerwrap = document.getElementById('footer-wrap');
 cgbgurl = 'http://zchn.github.io/cg/bgchangstreet.jpg';
-if(false && window.location.pathname === '/resume.html' && mainwrap !== null){
+if(window.location.pathname === '/video-projects.html' && mainwrap !== null){
+  mainwrap.style.background = "#000000";
+}
+if (false){
   mainwrap.style.background = "#000000 url('"+cgbgurl+"') fixed no-repeat center top";
   mainwrap.style['-webkit-background-size'] = 'cover';
   mainwrap.style['-moz-background-size'] = 'cover';
