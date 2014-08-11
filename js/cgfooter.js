@@ -17,3 +17,4 @@ if(window.location.pathname === '/' && footerwrap !== null){
   footerwrap.style.height = '0px';
   footerwrap.style.background = "initial";
 }
+
