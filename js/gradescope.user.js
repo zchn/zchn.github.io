@@ -6,6 +6,7 @@
 // @author       Kevin Chen
 // @match        https://www.gradescope.com/courses/*/questions/*/submissions/*/grade
 // @grant        none
+// @run-at       document-end
 // ==/UserScript==
 
 $(document).bind('keydown',']',function(){$('.page-icon.disabled.active').next().children()[0].click();});
