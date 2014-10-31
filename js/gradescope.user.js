@@ -10,5 +10,10 @@
 // @updateURL    http://zchn.github.io/js/gradescope.user.js
 // ==/UserScript==
 
-$(document).bind('keydown',']',function(){$('.page-icon.disabled.active').next().children()[0].click();});
+$(document).keydown(function(e){
+  if (e.which === 221){
+    $('.page-icon.disabled.active').next().children()[0].click();
+    }
+  }
+);
 
