@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gradescope next page
 // @namespace    http://zchn.github.io/
-// @version      0.4
+// @version      0.5
 // @description  enter something useful
 // @author       Kevin Chen
 // @match        https://www.gradescope.com/courses/*/questions/*/submissions/*/grade
