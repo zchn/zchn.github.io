@@ -1,4 +1,5 @@
 console.log('footerjs');
+headerwrap = document.getElementById('header-wrap');
 mainwrap = document.getElementById('main-wrap');
 footerwrap = document.getElementById('footer-wrap');
 cgbgurl = 'http://zchn.github.io/cg/bgchangstreet.jpg';
@@ -24,6 +25,9 @@ if(window.location.pathname === '/reel-list.html' && mainwrap !== null){
 }
 
 
+if(window.location.pathname === '/' && headerwrap !== null){
+  headerwrap.style.height = 0;
+}
 if(window.location.pathname === '/' && mainwrap !== null){
   mainwrap.remove();
 }
