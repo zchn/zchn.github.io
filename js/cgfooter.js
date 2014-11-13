@@ -26,7 +26,7 @@ if(window.location.pathname === '/reel-list.html' && mainwrap !== null){
 
 
 if(window.location.pathname === '/' && headerwrap !== null){
-  headerwrap.style.height = 0;
+  headerwrap.style.height = '100%';
 }
 if(window.location.pathname === '/' && mainwrap !== null){
   mainwrap.remove();
