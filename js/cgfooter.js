@@ -25,11 +25,9 @@ if(window.location.pathname === '/reel-list.html' && mainwrap !== null){
 
 
 if(window.location.pathname === '/' && mainwrap !== null){
-  mainwrap.style.height = '0px';
-  mainwrap.style.background = "initial";
+  mainwrap.remove();
 }
 if(window.location.pathname === '/' && footerwrap !== null){
-  footerwrap.style.height = '0px';
-  footerwrap.style.background = "initial";
+  footerwrap.remove();
 }
 
