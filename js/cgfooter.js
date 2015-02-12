@@ -24,6 +24,14 @@ if(window.location.pathname === '/reel-list.html' && mainwrap !== null){
   mainwrap.style['background-size'] = 'cover';
 }
 
+if(window.location.pathname === '/photography.html' && mainwrap !== null){
+  mainwrap.style.background = "#EDEDED";
+  mainwrap.style['-webkit-background-size'] = 'cover';
+  mainwrap.style['-moz-background-size'] = 'cover';
+  mainwrap.style['-o-background-size'] = 'cover';
+  mainwrap.style['background-size'] = 'cover';
+}
+
 
 if(window.location.pathname === '/' && headerwrap !== null){
   headerwrap.style.height = '100%';
