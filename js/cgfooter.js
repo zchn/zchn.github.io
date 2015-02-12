@@ -1,6 +1,7 @@
 console.log('footerjs');
 headerwrap = document.getElementById('header-wrap');
 mainwrap = document.getElementById('main-wrap');
+wsitecontent = document.getElementById('wsite-content');
 footerwrap = document.getElementById('footer-wrap');
 cgbgurl = 'http://zchn.github.io/cg/bgchangstreet.jpg';
 
@@ -30,6 +31,10 @@ if(window.location.pathname === '/photography.html' && mainwrap !== null){
   mainwrap.style['-moz-background-size'] = 'cover';
   mainwrap.style['-o-background-size'] = 'cover';
   mainwrap.style['background-size'] = 'cover';
+}
+
+if(window.location.pathname === '/art.html' && wsitecontent !== null){
+  mainwrap.style.width = "100%";
 }
 
 
