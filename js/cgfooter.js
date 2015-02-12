@@ -34,7 +34,7 @@ if(window.location.pathname === '/photography.html' && mainwrap !== null){
 }
 
 if(window.location.pathname === '/art.html' && wsitecontent !== null){
-  mainwrap.style.width = "100%";
+  wsitecontent.style.width = "100%";
 }
 
 
