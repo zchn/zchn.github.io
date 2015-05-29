@@ -1,0 +1,6 @@
+Contextual Policy Enforcement in Android Applications with Permission Event Graphs
+
+Malicious smartphone applications often surreptitiously access sensitive resources or abuse their privileges. We present a new approach for checking and enforcing policies concerning the context and order in which permissions and APIs may be used in an Android application. Our checker constructs Permission Event Graphs, a new, finite-state abstraction of the operating system context in which an application uses a permission. Our experiments show that we can check complex temporal policies with low false positives and false negatives.
+
+Kevin Chen, Noah Johnson, Vijay D'Silva, Shuaifu Dai, Kyle MacNamara, Tom Magrino, Edward Wu, Martin Rinard and Dawn Song
+
