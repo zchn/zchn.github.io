@@ -1,0 +1,34 @@
+/* andreas05 - an open source xhtml/css website layout by Andreas Viklund - http://andreasviklund.com/ . Free to use for any purpose as long as the proper credits are given for the original design work.
+Version: 2.0, July 15, 2006 */
+
+/* General tags */
+*{margin:0; padding:0;}
+body{background:#ccc url(images/bodybg.gif) repeat; font:100% verdana,tahoma,sans-serif;}
+a{background-color:inherit; color:#286ea0; font-weight:bold; text-decoration:none;}
+a:hover{text-decoration:underline;}
+p{margin:0 0 2% 0;}
+ul, ol{margin:0 0 5% 5%; padding-left:2%;}
+ul ul, ol ol{margin:2% 0 0 5%;}
+
+/* Headers */
+h1{color:#555; font-size:3.6em; letter-spacing:-3px; margin:0; text-align:right;}
+h2{font-size:1.6em; font-weight:normal; letter-spacing:-1px; margin:5% 0 2%;}
+
+/* IDs */
+#title{margin-left: auto; margin-right: 5%; text-align: right;}
+#container{background:#fff url(images/front.png) bottom left no-repeat; border:10px solid #555; color:#555; margin:0 auto 5%; padding:5%; width:80%; line-height:1.3em;}
+#sidebar{background:#fff; float:left; padding-left:2%; width:20%; font:80% verdana,tahoma,sans-serif;}
+#headpic{width:60%; margin-left: 10%; margin-right: 30%; align: center;}
+#sidebar p{margin:5% 0 0 0; text-align:left; font-size:1.0em;}
+#main{float:right; width:75%;text-align: left;}
+#footer{clear:both;}
+
+
+/* Menu */
+#sidebar #menu ul {list-style-type: none; margin: 0px; padding: 0px;}
+#sidebar #menu a, #sidebar #menu span {border:1px solid #ffffff; color:#286ea0; display:block; font-size:1.0em; font-weight:bold; padding:4px 2px 4px 10px;}
+#sidebar #menu a:hover, #sidebar .webgen-menu-item-selected a, #sidebar .webgen-menu-item-selected span {background-color:#f8f8f8; border:1px solid #dadada; color:#286ea0; text-decoration:none;}
+
+/* Various classes */
+.credits{color:#888; font-size:0.9em; margin-bottom:0;}
+.credits a{color:#888;}
