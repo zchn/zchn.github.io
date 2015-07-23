@@ -8,6 +8,8 @@ function height(){
 
 $(document).ready(function(){
 
+    $('body').css('cursor', 'none');
+
     var maingif = new SuperGif({ gif: $("#maingif")[0] } );
 
     var debug_status = {
