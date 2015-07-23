@@ -8,9 +8,26 @@ function height(){
 
 $(document).ready(function(){
 
-    debug_status = { version: 1};
+    var maingif = new SuperGif({ gif: $("#maingif")[0] } );
+
+    var debug_status = {
+	version: 1,
+	totalframes: 1,
+	x: 0,
+	y: 0,
+	time: $.now(),
+	xspeed: 0,
+	yspeed: 0,
+	xspeedmax: 0,
+	yspeedmax: 0,
+	speedFactor: 100.0,
+	start: 0,
+	end: 0,
+    };
+
+    var ds = debug_status;
     
-    showDbg = function(){
+    var showDbg = function(){
 	var dbg_txt = "";
 	for(k in debug_status){
 	    dbg_txt += k + '=' + debug_status[k] + ', ';
@@ -18,66 +35,45 @@ $(document).ready(function(){
 	$("#debug_status").text(dbg_txt);
     };
 
-    registerMouseMove = function(maingif) {
-	var mousePos;
+    var handleMouseMove = function(e){
+	var oldx = ds.x;
+	var speedFactor = ds.speedFactor;
+	var x = e.pageX;
+	var y = e.pageY;
+	var currTime = $.now();
+	var xspeed = (x-ds.x)*speedFactor/(currTime-ds.time);
+	var yspeed = (y-ds.y)*speedFactor/(currTime-ds.time);
+	ds.x = x;
+	ds.y = y;
+	ds.time = currTime;
+	ds.xspeed = xspeed;
+	ds.yspeed = yspeed;
+	ds.xspeedmax = ds.xspeedmax > xspeed ? ds.xspeedmax : xspeed;
+	ds.yspeedmax = ds.yspeedmax > yspeed ? ds.yspeedmax : yspeed;
+	//ds.start = ds.totalframes * 1.0 * oldx / width();
+	ds.end = ds.totalframes * 1.0 * ds.x / width();
+	maingif.move_to(ds.end);
+	showDbg();
+    }
 
-	document.onmousemove = handleMouseMove;
-	setInterval(getMousePosition, 100); // setInterval repeats every X ms
 
-	function handleMouseMove(event) {
-            var dot, eventDoc, doc, body, pageX, pageY;
-
-            event = event || window.event; // IE-ism
-
-            // If pageX/Y aren't available and clientX/Y are,
-            // calculate pageX/Y - logic taken from jQuery.
-            // (This is to support old IE)
-            if (event.pageX == null && event.clientX != null) {
-		eventDoc = (event.target && event.target.ownerDocument) || document;
-		doc = eventDoc.documentElement;
-		body = eventDoc.body;
-
-		event.pageX = event.clientX +
-		    (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-		    (doc && doc.clientLeft || body && body.clientLeft || 0);
-		event.pageY = event.clientY +
-		    (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
-		    (doc && doc.clientTop  || body && body.clientTop  || 0 );
-            }
-
-            mousePos = {
-		x: event.pageX,
-		y: event.pageY
-            };
-	}
-
-	var prevMousePos = { x: 0, y: 0};
-	function getMousePosition() {
-            var pos = mousePos;
-            if (!pos) {
-		// We haven't seen any movement yet
-            }
-            else {
-		if (pos.x === prevMousePos.x && pos.y === prevMousePos.y){
-		}else{
-		    maingif.move_to(maingif.get_length() * pos.x / width());
-
-		    debug_status.x = pos.x + '/' + width();
-		    debug_status.y = pos.y + '/' + height();
-		    debug_status.currframe = maingif.get_current_frame();
-		    showDbg();
-		}
-            }
+    var animateGif = function(){
+	return;
+	if (Math.abs(ds.start - ds.end) > 10){
+	    ds.step = (ds.xspeed * ds.xspeed + ds.yspeed * ds.yspeed) / (ds.xspeedmax + ds.yspeedmax) * Math.sign(ds.end - ds.start);
+	    //maingif.move_to(ds.start);
+	    ds.start = ds.start + ds.step;
+	    maingif.move_relative(ds.step);
+	    maingif.pause();
 	}
     };
 
-
-    var maingif = new RubbableGif({ gif: $("#maingif")[0] } );
-
     maingif.load(function(){
 	debug_status.totalframes = maingif.get_length();
-	registerMouseMove(maingif);
 	showDbg();
+
+	$("html").mousemove(handleMouseMove);
+	setInterval(animateGif, 50);
     });
 
 });
