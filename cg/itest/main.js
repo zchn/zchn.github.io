@@ -8,7 +8,7 @@ function height(){
 
 $(document).ready(function(){
 
-    $('body').css('cursor', 'none');
+    //$('body').css('cursor', 'none');
 
     var maingif = new SuperGif({ gif: $("#maingif")[0] } );
 
