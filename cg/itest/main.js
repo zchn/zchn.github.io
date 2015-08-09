@@ -8,6 +8,8 @@ function height(){
 
 $(document).ready(function(){
 
+    //$('body').css('cursor', 'none');
+
     var maingif = new SuperGif({ gif: $("#maingif")[0] } );
 
     var debug_status = {
@@ -40,9 +42,11 @@ $(document).ready(function(){
     var animateGif = function(){
 	ds.mframe = ds.totalframes * ds.x * 1.0 / ds.width;
 	newframe = ds.cframe + (ds.mframe - ds.cframe) * 0.1;
-	maingif.move_to(newframe);
-	maingif.pause();
-	ds.cframe = newframe;
+	if(Math.abs(ds.cframe-newframe) > 3){
+	    maingif.move_to(newframe);
+	    maingif.pause();
+	    ds.cframe = newframe;
+	}
     };
 
     maingif.load(function(){
