@@ -1,0 +1,8 @@
+escape ^L^L
+caption always "%?%F%{-b 4w}%:%{-b bb}%? %H | %l | %m-%d %c |%?%F%{-b 4w}%?%L=%-Lw%45>%{-b w4}%n%f* %t%{-}%+Lw%-0<"
+startup_message off
+
+# tell screen that you term can scroll
+# # pgup pgdn for xterm
+termcapinfo xterm*|rxvt* 'ti@:te@'
+
