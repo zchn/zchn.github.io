@@ -48,6 +48,16 @@ function distanceOfPoints(p1, p2) {
     return Math.sqrt(ret2);
 }
 
+// Given a color (r,g,b,a)
+// Distance to origin is sqrt (r^2, g^2, b^2)
+// Gven the target color (tr, tg, tb, ta)
+// Find a point (trp, tgp, tbp, tap) s.t.
+// Trp = tr*p
+// Tbp = tb*p
+// Tgp = tg*p
+// And
+// trp^2+tbp^2+tgp^2 = r^2+g^2+b^2
+// p^2 =  (r^2+g^2+b^2)/(tr^2+tg^2+tb^2)
 function getProjectionPoint(p, pt) {
     if (p.length !== pt.length) {
         return p.map(function(){return -1;});
