@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/kzc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://ckev.in
+  * I am kzc (https://keybase.io/kzc) on keybase.
+  * I have a public key with fingerprint 6B20 208D AE08 F6BD 6EE5  5415 2C41 A555 11B7 6A4D
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101b1e354a6a64e7cf2c37143cad945543790dd696af27ef5870c487177fa13cde70a",
+            "fingerprint": "6b20208dae08f6bd6ee554152c41a55511b76a4d",
+            "host": "keybase.io",
+            "key_id": "2c41a55511b76a4d",
+            "kid": "0101b1e354a6a64e7cf2c37143cad945543790dd696af27ef5870c487177fa13cde70a",
+            "uid": "ac50a477425706982f0d26130e350319",
+            "username": "kzc"
+        },
+        "service": {
+            "hostname": "ckev.in",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1459998378,
+    "expire_in": 157680000,
+    "prev": "493ee02fde3061d635120450a24766c72fc58c5a4c01ae567bd32fcc573d23c1",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMIeAnicrVJdSBVBGL1qZV3sl8h6SGhD6MFsZndnZ/dSECTFraiIS1EY19nZ2eui
+7V7vXX/SSlT6USwfEgohyEDMNDHqScEypKKyhwoyiX7sFqZEhkllCs2KvfXYvAxz
+5pzzne/j61+c4vMnDb9unWn9lPYu6XFffbHv4Pyn1ysE3TGOCYEKoYDNXqzQYHE3
+XGAZQkAAEEAdMgnJRCGKzDA1RSphKEuUGJqMkCxhDRiGoinEFDEzkYoBlVUMMTYJ
+lKjBMCBClmBadoTFojHLdrmtootABKpBGFBNRTcUxrgVRCKVIUEIQahjhcgGF+Y7
+cU/Bw+kkzrIth2P8EZ6N9w/+f85dPGtHKAJExlgWEQaKpoomMEQFSoBXABLUPGKc
+xWxylHlZy6lwIkvgQIlFmTdTr4m5T1rASrItmyuiMcd1qFPIwXzXjQY8jXss6pFK
+mR6ek4d1yzb48LighMXilmMLAciZ1LU8PygjTdNUCatZAiuLWjEWtjwGwooK+PHK
+sBJuKWsSY0A0DSYBBRqKhKAIZN6WKGNFoVg0KVIpIjIFkDCkYN2QOEYRlgxRolDw
+GiqyHSHAK7kkwi3jVsQmbnGMCSfu3c2d50vy+xbMT/aWyudftOzvqnUtX+g7k4pP
+F+x4MhPccTt1sLGnfkkgJxPWFH26sHZ1zeFf0cx962Zyjgzf7wwOVCa6rwYj5EDG
+1J4pOh5qGLO+Vvt3Xb5yuaNsS2/yx0wYIreemH29tST9y/Zzrw58GN2GKs6v/N5e
+1b/eDbzc9E3ve5GYEWr610zSz01L297Xdl+6WZtxY0NiqxhymgYbrgwlBh71bZYz
+dk53lU37mok93Z54W9nYVhXJS9n3nGb2tJ9+2JLnjPh7y9yRCWng59BEebfW1Jm6
+uO7Z3uDYyMnJoJRWGfr9Myk9t1QM+a7V3RlvBhmjzR/yjh9qadv4aH9yef+qnuoV
+6Eep2nHqzYPdF8/+AeKjRB4=
+=Kuqv
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kzc
+
+==================================================================
