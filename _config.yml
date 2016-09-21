@@ -17,7 +17,7 @@ title: Kevin Chen
 email: k_@berkeley.edu
 description: > # this means to ignore newlines until "baseurl:"
   Just testing some features of jekyll.
-baseurl: "/j" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ckev.in" # the base hostname & protocol for your site
 github_username:  zchn
 
