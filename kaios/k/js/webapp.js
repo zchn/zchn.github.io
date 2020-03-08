@@ -446,11 +446,11 @@
             logVisibilityDisplay.innerHTML = "I have focus!<br>";
             document.addEventListener("visibilitychange", function () {
                 if (document.hidden) {
-                    console.log("KaiOS hosted App is hidden");
+                    console.log("K is hidden");
                     logVisibilityDisplay.innerHTML += "Now I'm in the background<br>";
                 }
                 else {
-                    console.log("KaiOS hosted App has focus");
+                    console.log("K has focus");
                     logVisibilityDisplay.innerHTML += "I have focus!<br>";
                 }
             });
