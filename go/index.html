@@ -17,7 +17,6 @@
             }
             if (redirects[key]) {
               newurl = redirects[key] + '/' + remaining
-              document.getElementById('dest-url').href = newurl
               window.location.href = newurl
             } else {
               document.body = "Error: can't redirect to " + hash
@@ -26,6 +25,6 @@
         <title>Redirecting</title>
     </head>
     <body>
-        If you are not redirected automatically, follow <a id='dest-url' href='//ckev.in/'> this link.</a>
+        Redirecting
     </body>
 </html>
