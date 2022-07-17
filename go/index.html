@@ -11,8 +11,11 @@
             }
             hash = window.location.hash.substring(1)
             key = hash.split('/')[0]
-            remaining = hash.substring(hash.indexOf('/'))
-            if (!redirects[key]) {
+            remaining = ""
+            if (hash.indexOf('/') > 0) {
+                remaining = hash.substring(hash.indexOf('/'))
+            }
+            if (redirects[key]) {
               newurl = redirects[key] + '/' + remaining
               document.getElementById('dest-url').href = newurl
               window.location.href = newurl
