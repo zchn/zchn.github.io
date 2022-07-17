@@ -3,24 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <script type="text/javascript">
-            redirects = {
-              "bab": "https://cloud.google.com/docs/security/binary-authorization-for-borg",
-              "stef": "https://nsf.gov/od/lpa/nsf50/vbush1945.htm",
-              "ztcn": "https://ckev.in/j/ztcn",
-              "zzz": "https://en.wikipedia.org/wiki/Sleep"
+            function onload() {
+                redirects = {
+                  "bab": "https://cloud.google.com/docs/security/binary-authorization-for-borg",
+                  "stef": "https://nsf.gov/od/lpa/nsf50/vbush1945.htm",
+                  "ztcn": "https://ckev.in/j/ztcn",
+                "zzz": "https://en.wikipedia.org/wiki/Sleep"
+                };
+                hash = window.location.hash.substring(1);
+                key = hash.split('/')[0];
+                remaining = "";
+                if (hash.indexOf('/') > 0) {
+                    remaining = hash.substring(hash.indexOf('/'));
+                }
+                if (redirects[key]) {
+                    newurl = redirects[key] + '/' + remaining;
+                    window.location.href = newurl;
+                } else {
+                    document.body = "Error: can't redirect to " + hash;
+                }
             }
-            hash = window.location.hash.substring(1)
-            key = hash.split('/')[0]
-            remaining = ""
-            if (hash.indexOf('/') > 0) {
-                remaining = hash.substring(hash.indexOf('/'))
-            }
-            if (redirects[key]) {
-              newurl = redirects[key] + '/' + remaining
-              window.location.href = newurl
-            } else {
-              document.body = "Error: can't redirect to " + hash
-            }
+            window.onload = onload;
         </script>
         <title>Redirecting</title>
     </head>
