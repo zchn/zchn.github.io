@@ -14,10 +14,10 @@
                 key = hash.split('/')[0];
                 remaining = "";
                 if (hash.indexOf('/') > 0) {
-                    remaining = hash.substring(hash.indexOf('/'));
+                    remaining = '/' + hash.substring(hash.indexOf('/'));
                 }
                 if (redirects[key]) {
-                    newurl = redirects[key] + '/' + remaining;
+                    newurl = redirects[key] + remaining;
                     window.location.href = newurl;
                 } else {
                     document.body = "Error: can't redirect to " + hash;
